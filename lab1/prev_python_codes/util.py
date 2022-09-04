@@ -1,12 +1,13 @@
 import pandas as pd
 
-
+# Load information
 FULLINFO = pd.read_csv('fullinfo.csv')
 ENCODERS = pd.read_csv('encoder.csv',index_col=0)
 PARTS = list(ENCODERS.columns)
 SPE2NUM = {'狸花':1,'美短':2,'布偶':3,'三花':4}
 
 
+# Calculate the difference between the current and target cat
 def calmissing(targ,speinfo):
     score = 0
     res = []
@@ -37,7 +38,7 @@ def calmissing(targ,speinfo):
     return score, res
         
 
-
+# Print out the result
 def printres(targCat, score, requires):
     print('\n')
     print('-'*80)
@@ -52,7 +53,7 @@ def printres(targCat, score, requires):
 
 
 
-
+# Print the codes for each gene
 def printcodes(part):
     codes = ENCODERS.index
     partvals = ENCODERS[part]
@@ -66,6 +67,7 @@ def printcodes(part):
     print(str[:-1])
 
 
+# Print the codes for each cat
 def printcats():
     for i in range(8):
         for j in range(5):
@@ -73,6 +75,8 @@ def printcats():
             print('%8s:%2d'%(name, i*5+j), end = ' ')
         print()
 
+
+# Main Loop: Ask for current, Calculate result
 def mainloop():
     info = []
 
@@ -112,6 +116,7 @@ def mainloop():
 
 
 
+# Infinit loop until not to continue
 def main():
     
     while True:
