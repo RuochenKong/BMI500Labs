@@ -1,0 +1,6 @@
+The codes are well structured but with some problems when sharing on the cloud.
+
+1. The codes rely on a local file directory "home/geekgao". I think it would be better to put the files into the repo. If the files are not willing to share, maybe an explanation in the readme would also work.
+2. Some syntax is not work in my environment, for example, "except Exception, e" comes with a syntax error and should be "except Exception as e".
+3. Although the codes are quite clear, some HTML sentences are used which could be explained with comments.
+4. I think it would be better to write more about the project in the readme files. For example, what does each file stand for?
