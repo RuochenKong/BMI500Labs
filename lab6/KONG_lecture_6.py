@@ -106,4 +106,8 @@ def problem2():
 
 if __name__ == '__main__':
     problem1()
+
+    '''
+    Whether or not lower cased the text doesn't affect the performance of the POS tagger.
+    '''
     problem2()
