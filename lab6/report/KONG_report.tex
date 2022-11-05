@@ -1,0 +1,83 @@
+\documentclass[a4paper,11pt]{article}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.3cm plus4mm minus3mm}
+\setlength{\marginparwidth }{2cm}
+
+\textwidth  6.5in
+\oddsidemargin +0.0in
+\evensidemargin +0.0in
+\textheight 10in
+\topmargin -0.5in
+\linespread{1}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+%\newcommand{\gguide}{{\it Preparing graphics for IOP journals}}
+%Uncomment next line if AMS fonts required
+%\usepackage{iopams}  
+\usepackage{natbib}
+  % this is to disable \equation definition by iop and leave it to asmathet
+  \expandafter\let\csname equation*\endcsname\relax
+  \expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{pdfpages}
+\usepackage{listings}
+
+\setstcolor{red}
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+\begin{document}
+
+\title{Lecture 6 Report}
+
+\author{Ruochen Kong}
+
+\date{}
+\maketitle
+
+\section{Problem 1}
+
+The \textbf{cosine similarity} is \textbf{0.3975}, and \textbf{jaccard similarity} is \textbf{0.0369}.
+
+\section{Problem 2}
+
+The taggers used in this problem are :
+\begin{enumerate}
+  \item Unigram tagger
+  \item Bigram tagger
+  \item Bigram tagger with the unigran tagger as the first backoff-tagger and the default tagger as the second backoff-tagger
+\end{enumerate}
+
+The result shows that the unigram tagger has an accuracy of \textbf{0.8121} over validation dataset, the bigram tagger has an accuracy of \textbf{0.1021}, and the combined tagger has an accuracy of \textbf{0.8452}
+
+Based on the performance, the trained combined tagger is used to tag the text1 file.
+The resulted tags showed no difference between the original text and the lower cased text.
+
+\section{Problem 3}
+
+Need vectorize embeddings, text tagging, vocabularies, models, and evaluation methods.
+
+\end{document}

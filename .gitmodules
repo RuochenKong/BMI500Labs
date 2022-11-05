@@ -1,0 +1,4 @@
+[submodule "lab11"]
+	path = lab11
+	url = git@github.com:RuochenKong/BMI500_Lab11.git
+git submodule update --remote
