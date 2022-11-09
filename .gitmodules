@@ -1,3 +1,6 @@
 [submodule "lab11"]
 	path = lab11
 	url = git@github.com:RuochenKong/BMI500_Lab11.git
+[submodule "lab12"]
+	path = lab12
+	url = git@github.com:jlucasmckay/bmi-500-2022.git
